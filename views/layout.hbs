@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- css stuff -->
-    <!-- link to reset -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <link rel="icon" href="images/favicon.png">
+    <title>Favourite Things</title>
 </head>
-
 <body>
+    <div class="mobile-nav">
+        <div class="mobile-nav-close">
+            <img src="images/cross.svg" alt="cross icon">
+        </div>
+        <div class="mobile-nav-container">
+            <a href="#wine" class="mobile-nav-link">Wine</a>
+            <a href="#iphone" class="mobile-nav-link">iPhone</a>
+            <a href="#toblerone" class="mobile-nav-link">Toblerone</a>
+        </div>
+    </div>
     <nav>
-
+        <div class="nav-container">
+            <div class="nav-left">
+                <svg viewBox="0 0 32 28" style="transition: 0.7s all ease-in-out;" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.4821 1C27.6341 1 31 2.03474 31 7.5C31 13.5761 17.3174 27 15.9642 27C14.611 27 1 13.8587 1 7.5C1 2.03474 4.36588 1 8.5179 1C12.6699 1 15.9642 3.91015 15.9642 7.5C15.9642 3.91015 19.3301 1 23.4821 1Z" stroke="black" stroke-linecap="round" style="transition: 0.7s all ease-in-out;" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="nav-right">
+                <a href="#wine" class="nav-link">Wine</a>
+                <a href="#iphone" class="nav-link">iPhone</a>
+                <a href="#toblerone" class="nav-link">Toblerone</a>
+            </div>
+            <div class="nav-burger">
+                <img src="images/burger.svg" alt="burger-icon">
+            </div>
+        </div>
     </nav>
 
     <main>
         {{{ body }}}
     </main>
 
-    <script type="module" src="js/main.js"></script>
-    <script>
-        var name = "Justin";
-
-        console.log('name in main file: ' + name);
-    </script>
+    <script src="js/main.js"></script>
 
     <!-- templates -> these don't get rendered immediately -->
     <template id="user-template">
@@ -42,5 +59,4 @@
     </template>
     <!-- end templates-->
 </body>
-
 </html>
