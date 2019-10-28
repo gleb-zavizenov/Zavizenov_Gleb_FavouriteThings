@@ -1,13 +1,119 @@
+//
+// Styles for mobile version
+//
 
-nav {
-    background-color: pink;
+nav{
+    position: fixed;
+    top:20px;
+    left:0;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    ul {
-        margin: 0;
-        padding: 0;
+.nav-container{
+    width:280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        li { display: inline; }
+.nav-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:40px;
+    height:35px;
+
+    svg{
+        width:100%;
+        fill:none;
+    }
+}
+
+.nav-right{
+    display: none;
+}
+
+.nav-burger{
+    width:40px;
+    height:30px;
+    transition: 0.5s opacity ease-in-out;
+}
+
+//
+// Styles for tablet version
+//
+@media screen and (min-width:720px){
+
+    nav{
+        top:40px;
     }
 
-    a { text-decoration: none; }
+    .nav-container{
+        width:650px;
+    }
+
+    .nav-left{
+        width:45px;
+        height:40px;
+        cursor: pointer;
+
+        svg{
+            transition: 0.7s all ease-in-out;
+        }
+    }
+
+    .nav-left:hover{
+        svg{
+            fill:$heart-fill;
+            transition: 0.7s all ease-in-out;
+        }
+    }
+
+    .nav-right{
+        width:360px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-link{
+        font-family: "Montserrat",sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        color:$main-color;
+        text-decoration: none;
+        transition: 0.7s color ease-in-out;
+    }
+
+    .nav-link:first-child:hover{
+        color:$first-hover-color;
+    }
+
+    .nav-link:nth-child(2):hover{
+        color:$second-hover-color;
+    }
+
+    .nav-link:nth-child(3):hover{
+        color:$third-hover-color;
+    }
+
+    .nav-burger{
+        display: none;
+    }
+}
+
+//
+// Styles for desktop version
+//
+@media screen and (min-width:1200px){
+    .nav-container{
+        width:1200px;
+    }
 }
