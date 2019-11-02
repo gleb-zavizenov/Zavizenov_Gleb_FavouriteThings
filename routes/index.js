@@ -21,21 +21,19 @@ router.get('/', (req, res) => {
     })
 })
 
-// router.get('/:id', (req, res) => {
-//     // should really get the user data here and then fetch it thru, but let's try this asynchronously
-//     console.log('user route');
-//     console.log(req.params.id);
+router.get('/:id', (req, res) => {
+    // should really get the user data here and then fetch it thru, but let's try this asynchronously
 
-//     let query = `SELECT * FROM tbl_bio WHERE profID="${req.params.id}"`;
+    let query = `SELECT * FROM tbl_main_page WHERE ID="${req.params.id}"`;
 
-//     sql.query(query, (err, result) => {
-//         if (err) { throw err; console.log(err); }
+    sql.query(query, (err, result) => {
+        if (err) { throw err; console.log(err); }
 
-//         console.log(result); // should see objects wrapped in an array
+        console.log(result[0]); // should see objects wrapped in an array
 
-//         // render the home view with dynamic data
-//         // res.render('home', { people: result });
-//     })
-// })
+        // render the home view with dynamic data
+        res.json(result[0]);
+    })
+})
 
 module.exports = router;
