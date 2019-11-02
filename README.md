@@ -25,7 +25,7 @@ https://github.com/gleb-zavizenov/Zavizenov_Gleb_FavouriteThings.git
 ```
 2. Install NPM packages
 ```sh
-npm
+npm install
 ```
 3. Import database to your server form 'database' folder
 4. Run Node
