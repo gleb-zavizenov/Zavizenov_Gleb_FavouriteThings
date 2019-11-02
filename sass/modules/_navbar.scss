@@ -61,15 +61,17 @@ nav{
         height:40px;
         cursor: pointer;
 
-        svg{
-            transition: 0.7s all ease-in-out;
+        path{
+            fill: transparent;
+            transition: fill 0.7s ease-in-out;
         }
     }
 
     .nav-left:hover{
-        svg{
-            fill:$heart-fill;
-            transition: 0.7s all ease-in-out;
+
+        path{
+            transition: fill 0.7s ease-in-out;
+            fill: $heart-fill;
         }
     }
 
@@ -113,6 +115,11 @@ nav{
 // Styles for desktop version
 //
 @media screen and (min-width:1200px){
+
+    nav{
+        top:40px;
+    }
+
     .nav-container{
         width:1200px;
     }

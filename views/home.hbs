@@ -1,15 +1,15 @@
-{{#each sections}}
-<a name="{{anchor}}"></a>
-<section style="background-color:{{color}};">
-    <div class="section-content">
-        <div class="section-content-left">
-            <img src="images/{{image}}" alt="favourite-thing-image">
+<div class="home-container">
+    {{#each sections}}
+    <div class="container-section">
+        <div class="container-section-top">
+            <img src="images/{{image}}" alt="favourite-thing">
         </div>
-        <div class="section-content-right">
-            <h1 class="section-heading">{{heading}}</h1>
-            <h3 class="section-subheading">{{subheading}}</h3>
-            <p class="section-text">{{description}}</p>
+        <div class="container-section-bottom">
+            <h2 class="section-bottom-title">{{heading}}</h2>
+            <a href="{{ID}}" class="section-bottom-btn {{anchor}}">
+                <p class="section-bottom-btn-text">Learn more</p>
+            </a>
         </div>
     </div>
-</section>
-{{/each}}
+    {{/each}}
+</div>
