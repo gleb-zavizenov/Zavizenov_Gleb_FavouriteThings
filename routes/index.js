@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res) => {
+router.get('/objects/:id', (req, res) => {
     // should really get the user data here and then fetch it thru, but let's try this asynchronously
 
     let query = `SELECT * FROM tbl_main_page WHERE ID="${req.params.id}"`;

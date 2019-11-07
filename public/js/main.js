@@ -57,7 +57,7 @@ const myVM = (() => {
     function getUserData(e) {
       e.preventDefault();
       //1, 2 , or 3 depending on which anchor tag you click
-      let url = `/${this.getAttribute("href")}`;
+      let url = `/objects/${this.getAttribute("href")}`;
   
       //this goes and fetches the database content ( or an API endpoint)
       // that's why it's called a fetch!
