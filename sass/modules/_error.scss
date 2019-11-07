@@ -1,0 +1,115 @@
+// Error page
+
+//
+// Styles for the mobile version
+//
+.error-wrapper{
+    width:100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-block{
+    height:50vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-status{
+    font-family: 'Montserrat';
+    color: $heart-fill;
+    font-size:96px;
+    font-weight: 700;
+}
+
+.red-line{
+    background-color:$heart-fill;
+    width:160px;
+    height:3px;
+    margin-top:10px;
+    margin-bottom: 25px;
+}
+
+.error-message{
+    font-family: 'Montserrat';
+    color: black;
+    font-size:18px;
+    font-weight: 400;
+}
+
+.image-block{
+    width:100%;
+    height:50vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    img{
+        height:100%;
+    }
+}
+
+//
+// Styles for the tablet version
+//
+@media screen and (min-width:720px){
+
+    .error-status{
+        font-size:144px;
+    }
+
+    .red-line{
+        width:250px;
+        height:5px;
+        margin-top:20px;
+        margin-bottom: 35px;
+    }
+
+    .error-message{
+        font-size:24px;
+    }
+}
+
+//
+// Styles for the desktop version
+//
+@media screen and (min-width:1200px){
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .error-wrapper{
+        width:1200px;
+        height:100vh;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .error-block{
+        width:50%;
+        height:100vh;
+    }
+
+    .image-block{
+        width:50%;
+        height:100vh;
+        align-items: flex-end;
+
+        img{
+            height:80%;
+        }
+    }
+}
